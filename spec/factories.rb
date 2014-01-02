@@ -8,4 +8,9 @@ FactoryGirl.define do
     name "E.T."
     director "Steven Spielberg"
   end
+  
+  factory :book do
+    name "House of Leaves"
+    author "Mark Z. Danielewski"
+  end
 end
