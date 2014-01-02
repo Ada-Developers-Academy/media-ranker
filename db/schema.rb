@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140102043555) do
     t.string  "name"
     t.string  "artist"
     t.text    "description"
-    t.integer "rank"
+    t.integer "rank",        default: 0
   end
 
 end
