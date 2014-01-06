@@ -1,0 +1,21 @@
+<div>
+  <h1>Top Movies</h1>
+  <% if @movies.empty? %>
+    Oops... There are not movies yet, add one.
+  <% end %>
+  <%= link_to "View More Movies", movies_path %>
+</div>
+<div>
+  <h1>Top Books</h1>
+  <% if @books.empty? %>
+    Oops... There are not books yet, add one.
+  <% end %>
+  <%= link_to "View More Books", books_path %>
+</div>
+<div>
+  <h1>Top Albums</h1>
+  <% if @albums.empty? %>
+    Oops... There are not albums yet, add one.
+  <% end %>
+  <%= link_to "View More Albums", albums_path %>
+</div>
