@@ -7,6 +7,13 @@ describe HomeController do
       get 'index'
       expect(response).to be_success
     end
+    
+    it "assigns top stuff" do
+      get :index
+      expect(assigns[:books]).to_not  be_nil
+      expect(assigns[:movies]).to_not be_nil
+      expect(assigns[:albums]).to_not be_nil
+    end
   end
 
 end
