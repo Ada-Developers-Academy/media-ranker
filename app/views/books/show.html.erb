@@ -1,2 +1,4 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1><%= @book.name %> <small>Directed by: <%= @book.director %></small></h1>
+<p><%= @book.description %></p>
+<%= link_to "View All Books", books_path, class: "btn btn-default"%>
+<%= link_to "View All Media", root_path, class: "btn btn-default"%>

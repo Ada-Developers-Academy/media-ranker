@@ -2,6 +2,7 @@ class AlbumsController < ApplicationController
   before_action :find_album, only: [:show, :edit, :update]
   
   def show
+    @album = Album.find(params[:id])
   end
   
   def index
