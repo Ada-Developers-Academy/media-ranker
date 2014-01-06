@@ -1,4 +1,10 @@
-<h1><%= @book.name %> <small>Directed by: <%= @book.director %></small></h1>
-<p><%= @book.description %></p>
+<h1><%= @book.name %> <small>Written by: <%= @book.author %></small></h1>
+<h4> Ranked: <%= @book.rank %> </h4>
+<p> <%= @book.description %></p>
+<%= form_for @book do |f| %>
+  <%= f.hidden_field :upvote %>
+  <%= f.submit "Upvote", class: "btn btn-primary" %>  
+<% end %>
+<br />
 <%= link_to "View All Books", books_path, class: "btn btn-default"%>
 <%= link_to "View All Media", root_path, class: "btn btn-default"%>
