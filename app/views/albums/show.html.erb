@@ -7,5 +7,6 @@
 <% end %>
 <br />
 <%= link_to "Edit #{@album.name}", edit_album_path, class: "btn btn-default"%>
+<%= link_to "DELETE", @album, method: :delete, confirm: "Are you sure?", class: "btn btn-danger" %>
 <%= link_to "View All Albums", albums_path, class: "btn btn-default"%>
 <%= link_to "View All Media", root_path, class: "btn btn-default"%>

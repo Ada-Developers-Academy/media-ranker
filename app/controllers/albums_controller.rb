@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :find_album, only: [:show, :edit, :update]
+  before_action :find_album, only: [:show, :edit, :update, :destroy]
   
   def show
     @album = Album.find(params[:id])
@@ -31,6 +31,11 @@ class AlbumsController < ApplicationController
     else
       render :new
     end
+  end
+  
+  def destroy
+    @album.destroy
+    redirect_to albums_path, notice: "Destoyed Album"
   end
   
   private
