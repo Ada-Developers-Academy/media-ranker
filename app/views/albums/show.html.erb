@@ -1,4 +1,5 @@
 <h1><%= @album.name %> <small>Directed by: <%= @album.director %></small></h1>
 <p><%= @album.description %></p>
+<%= link_to "Edit #{@album.name}", edit_album_path, class: "btn btn-default"%>
 <%= link_to "View All Albums", albums_path, class: "btn btn-default"%>
 <%= link_to "View All Media", root_path, class: "btn btn-default"%>

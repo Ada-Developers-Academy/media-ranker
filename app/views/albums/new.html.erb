@@ -1,9 +1,1 @@
-<%= form_for :movie, url: {action: "create"} do |f| %>
-  <div class="form-group">
-    <%= f.label :name %> <%= f.text_field :name, class: "form-control" %>
-    <%= f.label :artist %><%= f.text_field :artist, class: "form-control" %>
-    <%= f.label :description %><%= f.text_area :description, class: "form-control" %>
-    <%= f.submit "Create", class: "btn btn-default" %>
-  </div>    
-   
-<% end %>
+<%= render form %>
