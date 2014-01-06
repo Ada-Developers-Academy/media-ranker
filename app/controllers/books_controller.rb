@@ -26,7 +26,7 @@ class BooksController < ApplicationController
   
   def update
     if @book.update(book_params)
-      redirect_to :back
+      redirect_to @book
     else
       render :edit
     end

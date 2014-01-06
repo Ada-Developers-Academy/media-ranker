@@ -5,7 +5,7 @@
       Oops... There are not movies yet, <%= link_to "add one", new_movie_path %>.
     <% else %> 
       <% @movies.order("rank DESC")[0..9].each do |movie| %> 
-        <h2> <%= movie.name %> <small>Ranked: <%= movie.rank %> </small></h2>
+        <h2> <%= link_to movie.name, movie %> <small>Ranked: <%= movie.rank %> </small></h2>
       <% end %>  
     <% end %>
     <%= link_to "View More Movies", movies_path %>
@@ -16,7 +16,7 @@
       Oops... There are not books yet, <%= link_to "add one", new_book_path %>.
     <% else %> 
       <% @books.order("rank DESC")[0..9].each do |book| %> 
-        <h2> <%= book.name %> <small>Ranked: <%= book.rank %> </small></h2>
+        <h2> <%= link_to book.name, book %> <small>Ranked: <%= book.rank %> </small></h2>
       <% end %>  
     <% end %>
     <%= link_to "View More Books", books_path %>
@@ -27,7 +27,7 @@
       Oops... There are not albums yet, <%= link_to "add one", new_album_path %>.
     <% else %> 
       <% @albums.order("rank DESC")[0..9].each do |album| %> 
-        <h2> <%= album.name %> <small>Ranked: <%= album.rank %> </small></h2>
+        <h2> <%= link_to album.name, album %> <small>Ranked: <%= album.rank %> </small></h2>
       <% end %>  
     <% end %>
     <%= link_to "View More Albums", albums_path %>
