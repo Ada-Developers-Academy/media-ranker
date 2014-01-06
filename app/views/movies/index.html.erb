@@ -1,1 +1,4 @@
-<%= render @movies %>
+<% @movies.each do |movie| %>
+  <h1> <%= link_to movie.name, movie %> </h1>
+<% end %>  
+  
