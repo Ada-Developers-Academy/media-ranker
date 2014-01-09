@@ -1,6 +1,7 @@
 <h1><%= @book.name %> <small>Written by: <%= @book.author %></small></h1>
 <h4> Ranked: <%= @book.rank %> </h4>
 <p> <%= @book.description %></p>
+<%= readable_date @book.created_at %>
 <%= form_for @book do |f| %>
   <%= f.hidden_field :upvote %>
   <%= f.submit "Upvote", class: "btn btn-primary" %>  

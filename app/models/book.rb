@@ -7,4 +7,9 @@ class Book < ActiveRecord::Base
     self.upvote = nil
     self.rank  += 1
   end
+  
+  def is_it_really_cool_compared_to?(id)
+    book = Book.find(id)
+    self.rank > book.rank
+  end
 end
