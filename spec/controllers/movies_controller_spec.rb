@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-describe MoviesController do
-  describe do
-    it_behaves_like "a RESTful controller", "movie"
-  end
+describe MoviesController, type: :controller  do
+  it_behaves_like "a RESTful controller", "movie"
 end
