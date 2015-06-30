@@ -13,17 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20140102061940) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "albums", force: true do |t|
+  create_table "albums", force: :cascade do |t|
     t.string  "name"
     t.string  "artist"
     t.text    "description"
     t.integer "rank",        default: 0
   end
 
-  create_table "books", force: true do |t|
+  create_table "books", force: :cascade do |t|
     t.string   "name"
     t.string   "author"
     t.text     "description"
@@ -32,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140102061940) do
     t.datetime "updated_at"
   end
 
-  create_table "movies", force: true do |t|
+  create_table "movies", force: :cascade do |t|
     t.string   "name"
     t.string   "director"
     t.text     "description"
