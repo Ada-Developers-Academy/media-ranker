@@ -52,7 +52,7 @@ shared_examples "a RESTful controller" do |record_name|
     context "when it saves" do
       let!(:request) { post :create, "#{record_name}" => record.attributes }
       it "assigns the saved record" do
-        expect(assigns[record_name.to_sym].new_record?).to be_false
+        expect(assigns[record_name.to_sym].new_record?).to be_falsey
       end
   
       it "redirects to the record" do
@@ -74,7 +74,7 @@ shared_examples "a RESTful controller" do |record_name|
     context "when it saves" do
       let!(:request) { patch :update, id: record.id, "#{record_name}" => record.attributes }
       it "assigns the saved record" do
-        expect(assigns(record_name.to_sym).new_record?).to be_false
+        expect(assigns(record_name.to_sym).new_record?).to be_falsey
       end
   
       it "redirects to record" do
