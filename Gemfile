@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'puma'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
+gem 'simplecov', require: false, group: :test
+
 group :test, :development do
   gem "rspec-rails"
   gem "guard-rspec"
